@@ -1,0 +1,72 @@
+<script type="text/javascript">
+
+function A(){ this.a = 2; };
+A.prototype = { a: 3 };
+
+function B(){ return 2; };
+B.prototype = { a: 3 };
+
+function C(){ return { a: 2 }; };
+C.prototype = { a: 3, b: 4 };
+
+function D(){ };
+D.prototype = { a: 3 };
+
+
+/**
+ 
+ 有一个问题需要理解的是，规范中（ECMASCRIPT）定义的是“结果”，而并不强制要求实现的具体过程，也就是说引擎可以根据自己的情况来进行实现上的优化。
+ 
+ 下面是 new 关键字的原理流程
+ 
+ function myClass(){
+ 	return ...
+ }
+ 
+ myClass.prototype = {
+ 	...
+ 	...
+ }
+ 
+ myClass是一个函数，它可以与 new 关键字一起使用，创建一个对象。函数 myClass，就是构造函数
+ myClass有一个静态属性，myClass.prototype
+ 
+ 实例化
+ ======
+ 
+ 当执行 `new myClass()` 时，进行了如下的过程
+ 
+ a1. 分配了一个对象 `{}` (假若我们叫它`ins`)，
+ a2. 将 `ins` 的“原型” 指向 `myClass.prototype`
+ a3. 执行构造函数 `myClass`，函数中的 `this`，就指向 `ins`
+ a4. 
+ 	1. 若 `myClass` 的返回值是一个对象类型，则该对象会赋值给`ins`（注意这里是替代了原来的`ins`，因此也会失去“原型”信息）
+ 	2. 若 `myClass` 的返回值不是一个对象类型，则不做其他事情
+ 	
+ a5. 返回 ins
+ 
+ 
+ 值的读取
+ =========
+ 
+ 假若我们尝试读取 ins 上的 "a" 属性，
+ 
+ b1. 若 ins 对象上包含 a，则返回 a，否则进入 b2
+ b2. 若 ins 的原型（myClass.prototype）中包含 a，则返回 a，否则返回 undefined
+ 
+ 当为 ins.a 赋值的时候，不会包含查找原型的过程
+
+ */
+
+
+console.log(new A); // {a:2}, 执行构造函数 A() 之后，this.a 被赋值为了 2
+
+
+console.log(new B); // {}, B 的返回值，不是对象类型，而是数字2。（对应上面的规则 a4）, 但是 new B().a 为 3
+
+console.log(new C); // {a: 2}, 且 new C().b 为 undefined.  注意(a4.2)
+
+console.log(new D); // {}, new D().a 为 3
+
+
+</script>

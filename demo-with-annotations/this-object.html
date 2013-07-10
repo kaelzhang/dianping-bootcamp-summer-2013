@@ -1,0 +1,54 @@
+<meta charset="UTF-8">
+
+<a id="link" href="javascript:">点我</a>
+
+<script type="text/javascript">
+
+var
+
+obj = {
+    foo:function () {
+        return this.a;
+
+    },
+
+    a:1
+},
+
+obj2 = {
+    a:2
+},
+
+obj3 = {
+    a:3
+},
+
+foo = obj.foo;
+
+obj2.foo = obj.foo;
+
+
+console.log(obj.foo());       		// 1
+									// . 运算符表达了一个调用者的关系，意思是 obj 调用了 obj 中的 foo方法
+									// 因此在这里，obj.foo 中的this, 其实就是obj对象
+									
+console.log(obj2.foo());         	// 2
+									// 
+									
+console.log(foo.call(obj3));     	// function 的 call方法，将 foo 中的 this 强制指定为 obj3
+console.log(obj.foo.call(obj3)); 	// 
+
+console.log('----------- 传说中的分割线 -----------');
+
+var link = document.getElementById('link');
+
+function clickMe(){
+	console.log(this);
+};
+
+link.addEventListener('click', clickMe, true); // DOM事件中，回调函数中的this，为该事件绑定的元素
+
+console.log('未显示指定上下文:');
+clickMe();
+
+</script>

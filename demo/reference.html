@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+
+<script type="text/javascript">
+
+num = 1;
+	arr = [1, 2, 3];
+	obj = {
+		a: 1,
+		b: 2
+	};
+	
+	arr2 = arr;
+	
+function changeNumber(n){
+	return n + 1;
+}
+
+function changeArray(a){
+	a.push(7);
+}
+
+function changeObj(o){
+	o.c = 3;
+}
+
+
+num = changeNumber(num);
+changeArray(arr);
+changeObj(obj);
+
+
+console.log('num', num);
+console.log('arr:', arr);
+console.log('arr2:', arr2);
+console.log('obj:', obj);
+
+
+</script>

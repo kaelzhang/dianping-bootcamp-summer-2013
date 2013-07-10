@@ -1,0 +1,28 @@
+<script type="text/javascript">
+
+var array = ['a', 'b', 'c', 'd'], i = 0, j = 0, len = array.length, alerts = [];
+
+/**
+
+预期结果：
+
+0 : a
+1 : b
+2 : c
+3 : d
+
+
+*/
+
+for(; i < len; i ++){
+	alerts[i] = function(){
+		console.log(i + ' : ' + array[i]);
+	}
+}
+
+
+for(; j < len; j ++){
+	alerts[j]();
+}
+
+</script>

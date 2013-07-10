@@ -1,0 +1,24 @@
+<script type="text/javascript">
+var g = 1;
+
+function factory() {
+    var g = 100;
+    return {
+        print:function () {
+            return g;
+        },
+        change:function (n) {
+            g = n;
+        }
+    }
+};
+
+var method = factory();
+
+console.log(g);                  // ?
+console.log(method.print());     // ?
+console.log(method.change(101));
+console.log(method.print());
+console.log(g);					 // ?
+
+</script>

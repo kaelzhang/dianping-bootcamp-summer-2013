@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+
+<script>
+
+// Number
+var num = 1;
+
+// String
+var str = "a" + "b";
+
+// Boolean
+var bool = true;
+
+
+
+// Object
+var obj = {
+    a: 1,
+    foo: foo 
+};
+
+// Array
+var arr = [num, "a", function(){}, {}];
+
+// RegExp
+var regexp = /\.js/;
+
+// 访问一个对象的成员
+obj.a;
+obj['a'];
+obj.foo = 1; // 赋值
+
+// 访问一个数组的成员
+arr[0];
+arr[100] = 10; // 赋值，js数组大小可以动态分配
+
+// Function
+var foo = function(n){
+    return n;
+};
+
+var foo2 = function(n){
+    return n;
+};
+
+// first-class function
+// 函数可以作为参数传递，可以作为返回值返回
+var foo3 = foo(foo2);
+
+var voidfn = function(){};
+
+console.log( voidfn() );
+
+</script>
+</body>
+</html>

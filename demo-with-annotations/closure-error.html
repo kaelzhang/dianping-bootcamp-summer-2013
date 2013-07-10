@@ -1,0 +1,41 @@
+<script type="text/javascript">
+
+var array = ['a', 'b', 'c', 'd'], i = 0, j = 0, len = array.length, alerts = [];
+
+/**
+
+预期结果：
+
+0 : a
+1 : b
+2 : c
+3 : d
+
+
+*/
+
+for(; i < len; i ++){
+	alerts[i] = function(){
+        // 这里在运行的时候，i都已经变成了4
+		console.log(i + ' : ' + array[i]);
+	}
+}
+
+// 运行到这个地方，全局中的i已经变成了4
+
+for(; j < len; j ++){
+	alerts[j](); // 实际上，在执行 alerts[0] 的时候，i已经变成了4
+}
+
+/**
+
+最终实际上没有打印出预期的效果，打印成了：
+
+4 : undefined
+4 : undefined
+4 : undefined
+4 : undefined
+
+*/
+
+</script>
