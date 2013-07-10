@@ -2,9 +2,9 @@
 
 演示资料见
 
-- [语言那些事](http://kaelzhang.github.io/dianping-bootcamp-summer-2013/presentation/basic-javascript/)
-- [DOM 编程](http://kaelzhang.github.io/dianping-bootcamp-summer-2013/presentation/dom-scripting/)
-- [黑客攻击小作战](http://kaelzhang.github.io/dianping-bootcamp-summer-2013/presentation/hack-it/)
+- [语言那些事](http://kaelzhang.github.io/dianping-bootcamp-summer-2013/presentation/basic-javascript.html)
+- [DOM 编程](http://kaelzhang.github.io/dianping-bootcamp-summer-2013/presentation/dom-scripting.html)
+- [黑客攻击小作战](http://kaelzhang.github.io/dianping-bootcamp-summer-2013/presentation/hack-it.html)
 
 
 ## 课后作业
