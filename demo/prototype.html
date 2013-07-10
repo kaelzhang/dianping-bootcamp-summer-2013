@@ -1,0 +1,60 @@
+<meta charset="UTF-8">
+
+<script type="text/javascript">
+
+
+
+function A(){ this.a = 2; };
+A.prototype = { a: 3 };
+
+function B(){ return 2; };
+B.prototype = { a: 3 };
+
+function C(){ return { a: 2 }; };
+C.prototype = { a: 3 };
+
+function D(){ };
+D.prototype = { a: 3 };
+
+function E(){ return this.a = 3; };
+
+
+console.log(new A);
+console.log(new B);
+console.log(new C);
+console.log(new D);
+console.log(new E);
+
+
+console.log('------- 传说中的分割线 -------');
+
+
+
+
+function H(){}
+
+H.prototype = {
+    a: 1
+};
+
+var a = new H,
+    b = new H,
+    c = new H;
+
+b.a; // ?
+
+b.a = b.a;
+c.a = 2;
+
+H.prototype.a = 3;
+
+console.log('a.a', a.a); // ?
+console.log('b.a', b.a); // ?
+console.log('c.a', c.a); // ?
+
+delete b.a;
+
+console.log('b.a', b.a); // ?
+
+</script>
+

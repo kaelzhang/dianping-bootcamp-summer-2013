@@ -1,0 +1,81 @@
+<script type="text/javascript">
+var g = 1;
+
+function factory() {
+    var g = 100;
+
+    return {
+        print:function () {    // <2>
+            return g;
+
+        },
+
+        change:function (n) {
+
+            g = n;
+
+        }
+
+    }
+};
+
+function factoryWithInitValue(g) {
+    return {
+        print:function () {
+            return g;
+
+        },
+
+        change:function (n) {
+            g = n;
+        }
+
+    }
+};
+
+var method = factory(),
+    method2 = factoryWithInitValue(200),
+    obj = {
+        print:function () {
+            return g;
+
+        },
+
+        print2:method.print // <3>
+    };
+
+g = 2;
+
+if (3 > 2) {
+    g = 3;	// <1>
+}
+
+
+console.log(g);                 	// 由于javascript只有函数作用域
+                                    // （准确的说，这个说法是在javascript 1.7之前， 
+									//     javascript 1.7提供了一个 let 的关键字，用于定义一个块级的作用域中的值，详情可以参考 
+									//     https://developer.mozilla.org/en/New_in_JavaScript_1.7#let_statement
+                                    //  ），
+									// 没有块级作用域，所以全局的 g 为3
+									
+console.log(method.print());  		// method.print 实际对应 <2> 处的函数。作用域链的回溯情况是这样的：
+									// method.print 方法里面没有定义过 g，因此会向更外层的作用域查找 g，最终在 factory 的作用域中读取到 100
+								
+console.log(method.change(101)); 	// 这里，改变了 factory 作用域中 g 的值为 101
+									// 但是，我们这里要打印的是change方法的值，在javascript中，若一个函数没有使用 return 关键字定义返回值，那么
+									// 该函数的返回值为 undefined
+									
+console.log(method2.print());    	// 200
+console.log(method.print());     	// 101
+method2.change(102);
+
+console.log(obj.print());        	// 3
+console.log(obj.print2());       	// 101,
+									// 作用域、作用域链，是一个词法概念，而不是一个运行时概念。
+									// 也就是说，即使 obj.print2 被赋值的位置，虽然是全局的作用域(<3>的位置)，
+									// 但是 method.print 的外层作用域仍然是 factory.
+									// 
+
+console.log(g);					 	// 3
+
+</script>

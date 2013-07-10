@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<a id="link" href="javascript:">点我</a>
+<script type="text/javascript">
+var obj = {
+    foo:function () {
+        return this.a;
+    },
+    a:1
+};
+var obj2 = { a:2 };
+var obj3 = { a:3 };
+foo = obj.foo;
+obj2.foo = obj.foo;
+
+console.log(obj.foo());          // ?
+console.log(obj2.foo());         // ?
+console.log(foo.call(obj3));     // ?
+console.log(obj.foo.call(obj3)); // ?
+
+console.log('----------- 传说中的分割线 -----------');
+
+var link = document.getElementById('link');
+
+function clickMe(){
+	console.log(this);
+};
+
+link.addEventListener('click', clickMe, true);
+
+console.log('未显示指定上下文:');
+clickMe();
+
+</script>

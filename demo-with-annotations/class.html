@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+</head>
+
+<body>
+<script src="http://i1.dpfile.com/lib/1.0/neuron-active.min.53cf95a8154b692a089607d7d43c2034.js"></script>
+<script>
+
+// JavaScript 虽然没有类的概念，但是在 Neuron 中，我们封装了一个调用方式类似于传统语言类的方式
+// 因此，下面我们都称之为 "类"
+
+var Animal = DP.Class({
+
+    // initialize 会作为 Animal 类的构造函数
+    initialize: function(name){
+
+        // 这里的 this，大多数情况下，是 Animal 类的实例
+        this.name = name;
+        this.energe = 0;
+
+        console.log('我的名字叫', this.name);
+    },
+
+    eat: function() {
+        console.log('我吃，能量 + 1');
+        this.energe ++;
+        return this;
+    },
+
+    _getEnergy: function() {
+        return this.energe;
+    }
+});
+
+
+var EnglishLanguagePack = DP.Class({
+    readEnglishArticle: function(){
+        console.log('我阅读英语文章');
+        return this;
+    }
+});
+
+
+var ChineseLanguagePack = {
+    readChineseArticle: function(){
+        console.log('我阅读中文文章');
+        return this;
+    }
+};
+
+
+var Person = DP.Class({
+
+    // Extends，是 DP.Class 中可选的一个参数，用于继承于一个类
+    // 子类可以调用父类的方法
+    Extends: Animal,
+
+    Implements: [ ChineseLanguagePack, EnglishLanguagePack ]
+
+    study: function() {
+        console.log('我学');
+        return this;
+    },
+
+    startupDP: function() {
+        console.log('我创办了点评');
+        return this;
+    }
+});
+
+var Tao = new Person('Tao');
+
+// 这里可以连续使用 . 运算符（所谓 "链式调用" ）的原因是，eat 方法返回了实例本身
+Tao.eat().eat().eat().study().readEnglishArticle().readChineseArticle().startupDP()
+
+
+</script>
+
+</body>
+</html>

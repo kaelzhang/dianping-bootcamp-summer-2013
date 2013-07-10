@@ -1,0 +1,76 @@
+<script type="text/javascript">
+
+
+// 课程中没有涉及到原型链，及原型继承相关的问题，这里通过demo的方式来讲解，下面的例子
+// 下面的一些定义，是非官方的描述，有助于各位了解。
+
+// 这个demo中的问题，需要先理解 prototype.html 中的问题。
+
+
+function Parent(){};
+
+Parent.prototype = {
+	a: 1
+};
+
+
+function Child(){};
+
+Child.prototype = new Parent(); // <1>
+
+Child.prototype.b = 2; // <2>
+
+
+var child = new Child(),
+	parent = new Parent();
+
+console.log(child.a, child.b);  // 1 2 
+								// 可以看到， Child继承了Parent的a
+console.log(parent.a, parent.b); // 1 undefined
+
+
+/**
+ 
+ 我们来着重分析第 <1> 行，
+ 
+ 1. Child.prototype 此时是 {}，并且 Child.prototype 的原型指向了 Parent.prototype
+ 
+ 2. 第 <2> 行运行过后 Child.prototype 变成了 {b:2}, 原型仍然为 Parent.prototype
+ 
+ 
+ 我们来看看 child.a 如何获取到 1
+ 
+            __proto__                               __proto__
+ child {} --------------> Child.prototype {b:2} ----------------->  Parent.prototype {a:1}
+ 
+ 访问 child.a 
+ 1. 发现 child 上没有a
+ 2. 然后在 Child.prototype 上找，发现 Child.prototype 上也没有a，这个时候注意，Child.prototype 的原型为 Parent.prototype, 在 Parent.prototype 上找到了 a，可以看到这个时候有一个原型的链路往上，这个就叫做原型链，这个查找的过程，就叫原型回溯
+ 
+ 3. 因此 Child.prototype.a 的值，为 1， child.a 的值也为 1
+
+ 下面看一下，对父类的修改，如何影响到实例
+
+ */
+ 
+ Child.prototype.b = 3;
+ console.log(child.b); // 3, 注意，这里我们并没有重新创建 Child 的实例
+ 
+ // delete 关键字，可以删除一个对象上的成员
+ 
+ Child.prototype.a = 2;
+ console.log(child.a); // 2, 这时候，Child.prototype 上已经有a，因此不会向 Parent.prototype 中查找
+ 
+ Parent.prototype.a = 20;
+ console.log(child.a); // 仍然为 2
+ 
+ delete Child.prototype.a;
+ 
+ console.log(child.a); // 20，可以体会一下为什么这里是20
+ 
+ 
+ 
+ // 可以看到，我们用javascript模拟类，让 Child 继承了 Parent
+
+
+</script>

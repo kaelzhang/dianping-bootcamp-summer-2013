@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+</head>
+
+<body>
+<script src="http://i1.dpfile.com/lib/1.0/neuron-active.min.53cf95a8154b692a089607d7d43c2034.js"></script>
+<script>
+
+var Animal = DP.Class({
+    initialize: function(name){
+        this.name = name;
+        this.energe = 0;
+
+        console.log('我的名字叫', this.name);
+    },
+
+    age: 100,
+
+    eat: function() {
+        console.log('我吃，能量 + 1');
+        this.energe ++;
+        return this;
+    },
+
+    _getEnergy: function() {
+        return this.energe;
+    }
+});
+
+var Person = DP.Class({
+    Extends: Animal,
+
+    study: function() {
+        console.log('我学');
+        return this;
+    },
+
+    startupDP: function() {
+        console.log('我创办了点评');
+        return this;
+    }
+});
+
+var Tao = new Person('Tao');
+
+Tao.eat().eat().eat().study().startupDP()
+
+
+</script>
+
+</body>
+</html>

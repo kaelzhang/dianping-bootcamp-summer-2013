@@ -1,0 +1,17 @@
+<script type="text/javascript">
+
+var array = ['a', 'b', 'c', 'd'], i = 0, j = 0, len = array.length, alerts = [];
+
+for(; i < len; i ++){
+	(function(i){
+		alerts[i] = function(){
+			console.log(i + ' : ' + array[i]);
+		}
+	})(i);
+}
+
+for(; j < len; j ++){
+	alerts[j]();
+}
+
+</script>
