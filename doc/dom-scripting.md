@@ -188,6 +188,7 @@ $(selector); // 获取 DOM
 	<type>: handler
 });
 ```
+
 ***
 
 ## 事件类型
