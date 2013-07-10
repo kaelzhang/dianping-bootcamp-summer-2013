@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>reveal.js - The HTML Presentation Framework</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../src/css/reveal.min.css">
+    <link rel="stylesheet" href="../src/css/theme/default.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../src/lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+            document.write( '<link rel="stylesheet" href="../src/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section>
+                <h4>
+                    <span style="color: rgb(204,204,204);"> <font face="impact">learning</font>
+                    </span>
+                </h4>
+                <h1>basic javascript</h1>
+                <h4 style="letter-spacing: normal;"> <font color="#ccc" face="impact">In a simplest way</font>
+                </h4>
+                <div>
+                    <font color="#ccc" face="arial">by
+                        <a href="http://weibo.com/kael">Kael</a></font> 
+                </div>
+
+            </section>
+            <section>
+                <section>
+                    <h2>
+                        张颖
+                        <br></h2>
+                    <div>
+                        weibo:
+                        <a href="http://weibo.com/kael">@kael</a>
+                    </div>
+                    <div>
+                        <img src="u/img/profile.jpg">
+                        <br></div>
+
+                </section>
+                <section>
+                    <div>
+                        <ul>
+                            <li>
+                                2009 年加入点评
+                                <br></li>
+                            <li>主站 + 团购</li>
+                            <li>后来负责信息线前端团队</li>
+                            <li>今年开始专心负责前端架构工作</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>
+                        context
+                        <br></h2>
+                    <div>
+                        <br></div>
+                    <div>
+                        <br></div>
+                    <div>
+                        <ul>
+                            <li>关于作业</li>
+                            <li>聊点杂七杂八的事情</li>
+                            <li>JavaScript 基本语法及语法特性</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <br></div>
+                    <div>
+                        <br></div>
+                </section>
+                <section>
+                    <h2>
+                        goals
+                        <br></h2>
+                    <div>
+                        <br></div>
+                    <div>走出教室，都会写 JS</div>
+                </section>
+                <section>
+                    <h2>
+                        how to learn a new language?
+                        <br></h2>
+                    <div>
+                        <font color="#ccc">当你每天切换数种语言的时候...</font>
+                    </div>
+
+                </section>
+                <section>
+                    <div>理解原理</div>
+                    <div>掌握基本语法</div>
+                    <div>熟悉常用方法</div>
+                    <div>知道如何翻阅手册</div>
+                    <div>熟悉流行框架</div>
+                    <div>记得跌倒过的那些坑</div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>
+                        what can JavaScript do?&nbsp;
+                        <br></h2>
+                </section>
+                <section>
+                    <h2>
+                        JAVA JVM
+                        <br></h2>
+                    <div>
+                        written in JavaScript ?! (
+                        <a href="https://github.com/nurv/BicaVM">BicaVM</a>
+                        )
+                    </div>
+                    <div>
+                        <img src="u/img/geyou.jpg">
+                        <br></div>
+                </section>
+                <section>
+                    <h2>
+                        wEB aPPS
+                        <br></h2>
+                    <h2>MOBILE APP</h2>
+                    <div>
+                        <ul>
+                            <li>
+                                hybrid
+                                <br></li>
+                            <li>
+                                phonegap
+                                <br></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <br></div>
+
+                </section>
+                <section>
+                    <h2>
+                        WEB GAME
+                        <br></h2>
+                    <div>
+                        <a href="http://cuttherope.ie">cuttherope.ie</a>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>
+                        Server &amp; CLI app
+                        <br></h2>
+                    <div>
+                        with
+                        <a href="http://nodejs.org">NodeJS</a>
+                    </div>
+                </section>
+                <section>
+                    <h2>
+                        WHY ?
+                        <br></h2>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>BASIC TYPES</h2>
+                    <div>
+                        <a href="demo/basic.html">basic.html</a>
+                    </div>
+                </section>
+                <section>
+                    <h2>Primitive Types</h2>
+                    <div>in stack</div>
+                    <div>
+                        <ul>
+                            <li>Number</li>
+                            <li>String</li>
+                            <li>Boolean</li>
+                            <li>undefined, null</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>UNDEFINED</h2>
+                    <div>常量</div>
+                    <div>变量已经声明，但没有赋值</div>
+                    <div>访问不存在的数组成员</div>
+                    <div>访问不存在的对象成员</div>
+                </section>
+
+                <section>
+                    <h2>Reference Types</h2>
+                    <div>in heap (pointer)</div>
+                    <div>
+                        <ul>
+                            <li>Object</li>
+                            <li>Array</li>
+                            <li>RegExp</li>
+                            <li>Function</li>
+                            <li>...</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2>native methods</h2>
+                    <div>
+                        google "
+                        <font color="#33ccff">&lt;type&gt; MDN</font>
+                        "
+                    </div>
+                    <div>
+                        <br></div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>OBJECT &amp; Array</h2>
+                </section>
+                <section>
+                    <h2>demo</h2>
+                    <div>
+                        <a href="demo/reference.html">reference.html</a>
+                    </div>
+                </section>
+                <section>
+                    <h2>Array</h2>
+                    <div>数组是一种特殊类型的对象。</div>
+                    <div>访问数组成员：array[n]</div>
+                    <div>array[-1] ?</div>
+                </section>
+                <section>
+                    <h2>object</h2>
+                    <div>访问对象成员：</div>
+                    <div>
+                        <ul>
+                            <li>
+                                obj.a
+                                <br></li>
+                            <li>obj['a'] (关联数组，反射)</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2>METHOD_MISSING</h2>
+                    <div>
+                        调用 JS 对象上不存在的方法（函数成员）的时候会报错（
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxy</a>
+                        ），而不少其他的脚本语言可以处理：
+                    </div>
+                    <div>
+                        <ul>
+                            <li>ruby: method_missing</li>
+                            <li>groovy: methodMissing</li>
+                            <li>python: __getattr__</li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>
+                        Scope
+                        <br></h2>
+                    <div>JavaScript 没有块作用域</div>
+                    <div>作用域存在于函数范围</div>
+                </section>
+                <section>
+                    <h2>
+                        scope chain
+                        <br></h2>
+                    <div>
+                        <span style=""> <b>ECMA</b>
+                            : "Scope chain is a hierarchical chain of all parent variable objects, which are above the current function context; the chain is saved to the function at its creation."
+                        </span>
+                    </div>
+                    <div>i.e: &nbsp;lexically scoped</div>
+                </section>
+                <section>
+                    <h2>
+                        Scope chain
+                        <br></h2>
+                    <div>词法作用域是什么意思？</div>
+                    <div>
+                        <br></div>
+                    <div>作用域链是在函数定义的时候创建的，</div>
+                    <div>而跟函数运行时作用域无关。</div>
+                </section>
+                <section>
+                    <h2>
+                        Scope
+                        <br></h2>
+                    <div>JavaScript 没有块作用域。两种作用域：</div>
+                    <div>
+                        <ul>
+                            <li>
+                                global scope
+                                <br></li>
+                            <li>
+                                local scope: 定义在函数体中
+                                <br></li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2>demo</h2>
+                    <div>
+                        <a href="demo/scope.html">scope.html</a>
+                    </div>
+                </section>
+            </section>
+            <section>
+                <h2>`this`Object</h2>
+                <div>`this` 可以理解为方法的调用者。</div>
+                <div>
+                    <a href="demo/this-object.html">this-object.html</a>
+                </div>
+            </section>
+            <section>
+                <section>
+                    <h2>
+                        Prototype
+                        <img src="u/img/prototype.png"></h2>
+                </section>
+                <section>
+                    <div>
+                        <ul>
+                            <li>函数可以作为构造器</li>
+                            <li>当实例上没有某个成员，就会到原型上“寻找”</li>
+                            <li>原型继承，实质是子“类”的原型是父“类”的实例</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>jquery?</h2>
+                    <div>
+                        <ul>
+                            <li>如何实现链式操作 ?</li>
+                            <li>如何用 JS 实现封装 ?</li>
+                        </ul>
+                    </div>
+                </section>
+
+            </section>
+            <section>
+                <section>
+                    <h2>LEARNING CURVE</h2>
+                    <div>
+                        <ul>
+                            <li>本节课的内容</li>
+                            <li>开始动手写代码</li>
+                            <li>查阅手册: MDN</li>
+                            <li>学会使用周边框架帮助解决问题</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2>
+                        <br></h2>
+                </section>
+            </section>
+        </div>
+
+    </div>
+
+    <script src="../src/lib/js/head.min.js"></script>
+    <script src="../src/js/reveal.min.js"></script>
+
+    <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: '../src/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../src/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../src/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../src/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../src/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: '../src/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+                    // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ]
+            });
+
+        </script>
+
+</body>
+</html>
