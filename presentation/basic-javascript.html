@@ -14,15 +14,15 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <link rel="stylesheet" href="../src/css/reveal.min.css">
-    <link rel="stylesheet" href="../src/css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="../reveal/css/reveal.min.css">
+    <link rel="stylesheet" href="../reveal/css/theme/default.css" id="theme">
 
     <!-- For syntax highlighting -->
-    <link rel="stylesheet" href="../src/lib/css/zenburn.css">
+    <link rel="stylesheet" href="../reveal/lib/css/zenburn.css">
 
     <!-- If the query includes 'print-pdf', use the PDF print sheet -->
     <script>
-            document.write( '<link rel="stylesheet" href="../src/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script>
+            document.write( '<link rel="stylesheet" href="../reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );</script>
 
     <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
@@ -58,7 +58,7 @@
                         <a href="http://weibo.com/kael">@kael</a>
                     </div>
                     <div>
-                        <img src="u/img/profile.jpg">
+                        <img src="src/img/profile.jpg">
                         <br></div>
 
                 </section>
@@ -138,7 +138,7 @@
                         )
                     </div>
                     <div>
-                        <img src="u/img/geyou.jpg">
+                        <img src="src/img/geyou.jpg">
                         <br></div>
                 </section>
                 <section>
@@ -344,7 +344,7 @@
                 <section>
                     <h2>
                         Prototype
-                        <img src="u/img/prototype.png"></h2>
+                        <img src="src/img/prototype.png"></h2>
                 </section>
                 <section>
                     <div>
@@ -388,8 +388,8 @@
 
     </div>
 
-    <script src="../src/lib/js/head.min.js"></script>
-    <script src="../src/js/reveal.min.js"></script>
+    <script src="../reveal/lib/js/head.min.js"></script>
+    <script src="../reveal/js/reveal.min.js"></script>
 
     <script>
 
@@ -406,12 +406,12 @@
 
                 // Optional libraries used to extend on reveal.js
                 dependencies: [
-                    { src: '../src/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                    { src: '../src/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: '../src/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-                    { src: '../src/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-                    { src: '../src/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: '../src/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                    { src: '../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: '../reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: '../reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: '../reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
                     // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
                     // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
                 ]
