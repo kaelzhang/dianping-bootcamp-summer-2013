@@ -3,9 +3,11 @@
 - [Github 帐号创建](https://github.com/kaelzhang/dianping-bootcamp-summer-2013/blob/master/doc/github.md)
 - [JavaScript 基本语法预习](https://github.com/kaelzhang/dianping-bootcamp-summer-2013/blob/master/demo/basic.html)
 
-## 课后作业
+## 关于作业
 
 课后作业说明见 [https://github.com/kaelzhang/dianping-bootcamp-summer-2013/tree/master/homework](https://github.com/kaelzhang/dianping-bootcamp-summer-2013/tree/master/homework)
+
+作业编程帮助 [Chrome User Scripts](http://kaelzhang.github.io/dianping-bootcamp-summer-2013/presentation/user-scripts.html)
 
 ## 演示资料
 
