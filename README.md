@@ -1,3 +1,12 @@
+## 预习准备
+
+- [Github 帐号创建](https://github.com/kaelzhang/dianping-bootcamp-summer-2013/blob/master/doc/github.md)
+- [JavaScript 基本语法预习](https://github.com/kaelzhang/dianping-bootcamp-summer-2013/blob/master/demo/basic.html)
+
+## 课后作业
+
+课后作业说明见 [https://github.com/kaelzhang/dianping-bootcamp-summer-2013/tree/master/homework](https://github.com/kaelzhang/dianping-bootcamp-summer-2013/tree/master/homework)
+
 ## 演示资料
 
 演示资料见
@@ -6,10 +15,6 @@
 - [DOM 编程](http://kaelzhang.github.io/dianping-bootcamp-summer-2013/presentation/dom-scripting.html)
 - [黑客攻击小作战](http://kaelzhang.github.io/dianping-bootcamp-summer-2013/presentation/hack-it.html)
 
-
-## 课后作业
-
-课后作业说明见 [https://github.com/kaelzhang/dianping-bootcamp-summer-2013/tree/master/homework](https://github.com/kaelzhang/dianping-bootcamp-summer-2013/tree/master/homework)
 
 ## 其他资料
 
@@ -25,7 +30,7 @@
 
 ```bash
 npm install anywhere -g
-cd where/you/put/to/
+cd where/you/put/this/project/to/
 anywhere
 ```
 
