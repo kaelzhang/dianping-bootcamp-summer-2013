@@ -1,13 +1,3 @@
-## Why JavaScript?
-
-***
-
-1. 至少目前不算冷
-2. 目前处理网页端交互的最佳方式
-3. 广泛的用途
-
-****
-
 ## Why it called JavaScript?
 
 ***
@@ -30,6 +20,20 @@ Brendan Eich
 	- C（控制结构，EOS）
 	- Java（变量类型分类，Date 对象）
 	- Self（原型）
+
+****	
+
+## Why JavaScript?
+
+***
+
+1. 至少目前不算冷
+2. 目前处理网页端交互的最佳方式
+3. 广泛的用途
+
+***
+
+![wh](../doc/src/wh.jpg)
 	
 ****
 
@@ -46,29 +50,51 @@ written in JavaScript ?! ([BicaVM](https://github.com/nurv/BicaVM))
 ***
 
 ## Web apps 
-## Mobile apps
-- hybrid 
-- [PhoneGap](https://github.com/sintaxi/phonegap)
-- [Ejecta](https://github.com/phoboslab/Ejecta)
+## Web games
+
+[cuttherope.ie/](http://cuttherope.ie/)
+
+[cuttherope.devblog](http://www.cuttherope.ie/dev/)
 
 ***
 
-## WEB GAME
+## Mobile apps
+- Hybrid (WebView)
+- [PhoneGap](https://github.com/sintaxi/phonegap)
+- [Ejecta](https://github.com/phoboslab/Ejecta)
+- Nokia Widget
 
-[cuttherope.ie/](http://cuttherope.ie/)
+***
+
+## Desktop GUI
+
+- Adobe Air
+
+***
+
+## Extensions
+
+- unix，如机顶盒
+- [Photoshop](http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/devnet/photoshop/pdfs/photoshop_cs5_javascript_ref.pdf)
+- [Chrome/Firefox extension](https://developer.chrome.com/extensions/devguide.html)
+- User scripts (chrome/greasemonkey)
 
 ***
 
 ## SERVER & CLI APP 
 with [NodeJS](http://nodejs.org/)
 
+![nodejs](../doc/src/nodejs.png)
+
 ***
 
-## Extensions
+## Node.js
 
-- unix
-- [Photoshop](http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/devnet/photoshop/pdfs/photoshop_cs5_javascript_ref.pdf)
-- [Chrome extension](https://developer.chrome.com/extensions/devguide.html)
+Node.js 是一个基于[V8](https://code.google.com/p/v8/) 引擎的 JavaScript 环境，与浏览器不同，它提供了系统底层的访问权限。
+
+目前 node.js 已经有大量的组件，比如使用 [express](https://github.com/visionmedia/express) 可以几句话完成 structs 能做的常见事情。
+
+
 
 ***
 
