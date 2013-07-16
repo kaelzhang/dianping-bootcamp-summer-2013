@@ -102,5 +102,54 @@ Node.js 是一个基于[V8](https://code.google.com/p/v8/) 引擎的 JavaScript 
 
 ****
 
+# Hello world
+
+> 如何写最简单的 JavaScript
+
+***
+
+hello-world.html
+
+	<!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	
+	<body>
+		<script>
+			console.log('hello world');
+		</script>
+	</body>
+	</html>
+	
+***
+
+或者在 Chrome 开发者工具中输入
+
+```js
+console.log('hello world');
+```
+
+***
+
+## Node.js
+
+```bash
+$ node
+$ > console.log('hello world');
+```
+
+或者，在 hello-world.js 中
+
+```js
+console.log('hello world');
+```
+
+```bash
+$ node hello-world.js
+```
+
+****
+
 # Language Features
 
