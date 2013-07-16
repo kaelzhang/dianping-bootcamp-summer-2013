@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>reveal.js - The HTML Presentation Framework</title>
+    <title>Basic JavaScript</title>
 
     <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
     <meta name="author" content="Hakim El Hattab">
@@ -141,68 +141,7 @@
                     <div>记得跌倒过的那些坑</div>
                 </section>
             </section>
-            <section>
-                <section>
-                    <h2>
-                        what can JavaScript do?&nbsp;
-                        <br></h2>
-                </section>
-                <section>
-                    <h2>
-                        JAVA JVM
-                        <br></h2>
-                    <div>
-                        written in JavaScript ?! (
-                        <a href="https://github.com/nurv/BicaVM">BicaVM</a>
-                        )
-                    </div>
-                    <div>
-                        <img src="src/img/geyou.jpg">
-                        <br></div>
-                </section>
-                <section>
-                    <h2>
-                        wEB aPPS
-                        <br></h2>
-                    <h2>MOBILE APP</h2>
-                    <div>
-                        <ul>
-                            <li>
-                                hybrid
-                                <br></li>
-                            <li>
-                                phonegap
-                                <br></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <br></div>
-
-                </section>
-                <section>
-                    <h2>
-                        WEB GAME
-                        <br></h2>
-                    <div>
-                        <a href="http://cuttherope.ie">cuttherope.ie</a>
-                    </div>
-                </section>
-
-                <section>
-                    <h2>
-                        Server &amp; CLI app
-                        <br></h2>
-                    <div>
-                        with
-                        <a href="http://nodejs.org">NodeJS</a>
-                    </div>
-                </section>
-                <section>
-                    <h2>
-                        WHY ?
-                        <br></h2>
-                </section>
-            </section>
+            <section data-markdown="../doc/basic-javascript.md" data-separator="^\*\*\*\*" data-vertical="^\*\*\*"></section>
 
             <section>
                 <section>
@@ -263,7 +202,7 @@
                 <section>
                     <h2>demo</h2>
                     <div>
-                        <a href="demo/reference.html">reference.html</a>
+                        <a href="../demo/reference.html">reference.html</a>
                     </div>
                 </section>
                 <section>
@@ -348,7 +287,7 @@
                 <section>
                     <h2>demo</h2>
                     <div>
-                        <a href="demo/scope.html">scope.html</a>
+                        <a href="../demo/scope.html">scope.html</a>
                     </div>
                 </section>
             </section>
@@ -356,7 +295,7 @@
                 <h2>`this`Object</h2>
                 <div>`this` 可以理解为方法的调用者。</div>
                 <div>
-                    <a href="demo/this-object.html">this-object.html</a>
+                    <a href="../demo/this-object.html">this-object.html</a>
                 </div>
             </section>
             <section>
@@ -426,7 +365,7 @@
                 // Optional libraries used to extend on reveal.js
                 dependencies: [
                     { src: '../reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-                    { src: '../reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: '../reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: '../reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: '../reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
