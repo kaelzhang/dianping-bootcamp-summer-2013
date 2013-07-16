@@ -6,8 +6,14 @@
 
 <script>
 
+////////////////////////////////////////////////////
+// 基本变量类型
+////////////////////////////////////////////////////
+
 // Number
 var num = 1;
+// javascript 是弱类型，因此我们可以给 `num` 赋值为字符串
+num = '1'; 
 
 // String
 var str = "a" + "b";
@@ -15,12 +21,18 @@ var str = "a" + "b";
 // Boolean
 var bool = true;
 
-
+// Function
+function foo(n){
+    return n;
+};
 
 // Object
 var obj = {
     a: 1,
-    foo: foo 
+
+    // 弱类型，JavaScript 的对象中，成员可以为各种类型。数组同理
+    foo: foo,   // 在对象声明中，逗号 ','（comma）应该仅出现在 key-value 对之间。
+                // 否则（比如这里的情况）会引起兼容性问题(IE6-7)，数组同理
 };
 
 // Array
@@ -38,22 +50,16 @@ obj.foo = 1; // 赋值
 arr[0];
 arr[100] = 10; // 赋值，js数组大小可以动态分配
 
-// Function
-var foo = function(n){
-    return n;
-};
-
-var foo2 = function(n){
-    return n;
-};
 
 // first-class function
 // 函数可以作为参数传递，可以作为返回值返回
-var foo3 = foo(foo2);
+var foo3 = foo(foo(foo));
 
+// 函数还可以用赋值语句来定义
 var voidfn = function(){};
 
-console.log( voidfn() );
+// `console` 是目前大多数 JS 运行环境中已经实现的方法，可以打印一条调试信息 
+console.log( voidfn() ); // 若函数没有返回值，那么会打印出什么？
 
 </script>
 </body>
