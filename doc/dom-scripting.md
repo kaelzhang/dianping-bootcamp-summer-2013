@@ -4,11 +4,10 @@
 
 ## Context
 
+- 作业相关
 - CSS 简介
-- CSS Selector
 - DOM 操作
 - 事件编程
-- 作业相关
 
 ****
 
