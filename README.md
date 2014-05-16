@@ -1,3 +1,10 @@
+## 前言
+
+1. 有任何问题请直接在本项目中提 issue 来提问吧
+2. 帮忙支持公司项目吧，如果感兴趣，举手之劳点个 star 吧：
+  - [cortex - 前端解决方案](https://github.com/cortexjs/cortex)
+  - [cat - 点评大监控平台](http://github.com/dianping/cat)
+
 ## 预习准备
 
 - [Github 帐号创建](https://github.com/kaelzhang/dianping-bootcamp-summer-2013/blob/master/doc/github.md)
